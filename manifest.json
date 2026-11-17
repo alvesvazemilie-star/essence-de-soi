@@ -1,11 +1,11 @@
 {
-  "name": "L'Essence de Soi – Lash Artist",
+  "name": "Essence de Soi – Lash Artist",
   "short_name": "Essence de Soi",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f5efe8",
-  "theme_color": "#f5efe8",
+  "background_color": "#d6c0a1",
+  "theme_color": "#d6c0a1",
   "lang": "fr",
   "icons": [
     {
