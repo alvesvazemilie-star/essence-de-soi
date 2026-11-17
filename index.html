@@ -33,6 +33,10 @@ body{font-family:'Inter',sans-serif;font-weight:300;color:var(--choco);backgroun
 .note{font-size:13px;color:var(--doux);margin-top:14px}
 .home{margin-top:40px;background:none;border:1px solid rgba(59,42,32,.35);border-radius:30px;padding:11px 20px;font:inherit;font-size:13px;color:var(--choco);cursor:pointer}
 .tip{display:none;margin-top:14px;background:rgba(243,233,218,.55);border:1px solid rgba(59,42,32,.15);border-radius:14px;padding:16px;font-size:14px;text-align:left;line-height:1.7;color:var(--doux)}
+.offre{background:var(--choco);color:var(--beige);border-radius:16px;padding:14px 16px;margin:0 0 10px;font-size:14px;line-height:1.5}
+.offre b{display:block;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:12px;letter-spacing:3px;text-transform:uppercase;opacity:.75;margin-bottom:4px}
+#offres{margin:-14px 0 30px}
+.wa{display:none;margin-top:14px;padding:13px;border-radius:40px;border:1px solid var(--choco);color:var(--choco);text-decoration:none;font-size:14px}
 .tip.open{display:block}
 .tip b{font-weight:500;color:var(--choco)}
 </style>
@@ -47,14 +51,25 @@ body{font-family:'Inter',sans-serif;font-weight:300;color:var(--choco);backgroun
   <p class="signature">Votre regard,<br>ma signature.</p>
   <p class="welcome">Bienvenue. Ici, le temps ralentit. Installez-vous, fermez les yeux&nbsp;: je prends soin de votre regard avec douceur, pour qu'il vous ressemble, simplement.</p>
 
+  <div id="offres"></div>
   <a class="btn" href="https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec">Prendre rendez-vous</a>
   <p class="note">En 1 minute · Règlement sur place, le jour J</p>
+  <a class="wa" id="wa" target="_blank" rel="noopener">💬 Rejoindre ma chaîne WhatsApp</a>
 
   <button class="home" type="button" onclick="document.getElementById('tip').classList.toggle('open')">📲 Ajouter à mon écran d'accueil</button>
   <div class="tip" id="tip">
     <b>iPhone (Safari)</b> : bouton Partager ⎙ → « Sur l'écran d'accueil » → Ajouter.<br>
     <b>Android (Chrome)</b> : menu ⋮ → « Ajouter à l'écran d'accueil ».
   </div>
+  <p style="margin-top:30px;font-size:12px"><a href="https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec?legal" target="_blank" rel="noopener" style="color:var(--doux)">Mentions légales &amp; confidentialité</a></p>
 </div>
+<script>
+fetch('https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec?action=infos')
+  .then(function(r){ return r.json(); })
+  .then(function(i){
+    (i.offres||[]).forEach(function(o){ var d=document.createElement('div'); d.className='offre'; var b=document.createElement('b'); b.textContent='Offre du moment'; d.appendChild(b); d.appendChild(document.createTextNode(o)); document.getElementById('offres').appendChild(d); });
+    if (i.whatsapp) { var a=document.getElementById('wa'); a.href=i.whatsapp; a.style.display='block'; }
+  }).catch(function(){});
+</script>
 </body>
 </html>
