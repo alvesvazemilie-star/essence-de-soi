@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Essence de Soi – Lash Artist</title>
+<meta name="description" content="L'Essence de Soi, lash artist. Réserve ton rendez-vous en ligne, tu règles sur place.">
+<meta name="theme-color" content="#f5efe8">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Essence de Soi">
+<meta property="og:title" content="L'Essence de Soi – Lash Artist">
+<meta property="og:description" content="Réserve ton moment en ligne. Tu règles sur place.">
+<meta property="og:image" content="icon-512.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;font-weight:300;color:#3d2f26;background:linear-gradient(180deg,#f5efe8,#ede4d8);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:56px 22px 40px;text-align:center}
+.wrap{max-width:460px;width:100%}
+.logo{width:96px;height:96px;border-radius:24px;box-shadow:0 6px 24px rgba(107,79,58,.15)}
+.brand{font-family:'Cormorant Garamond',serif;font-size:38px;letter-spacing:2px;color:#6b4f3a;margin-top:22px}
+.sub{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#a08670;margin-top:4px}
+.intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:#6b4f3a;margin:30px 0 34px;line-height:1.45}
+.btn{display:block;padding:20px;border-radius:16px;background:#3d2f26;color:#f5ede0;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:3px;text-transform:uppercase}
+.btn:active{background:#6b4f3a}
+.note{font-size:13px;color:#a08670;margin-top:12px}
+.soins{margin-top:38px;background:#fdfbf7;border:1px solid #ebe0d0;border-radius:18px;padding:8px 18px;text-align:left}
+.soin{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #f0e6d8}
+.soin:last-child{border:none}
+.n{font-family:'Cormorant Garamond',serif;font-size:20px}
+.t{font-size:12px;color:#a08670;letter-spacing:1px;text-transform:uppercase}
+.p{font-family:'Cormorant Garamond',serif;font-size:20px;color:#6b4f3a;white-space:nowrap;text-align:right}
+.p small{display:block;font-family:'Inter',sans-serif;font-size:12px;color:#a08670}
+.home{margin-top:28px;background:none;border:1px solid #d4bfa2;border-radius:30px;padding:11px 20px;font:inherit;font-size:13px;color:#6b4f3a;cursor:pointer}
+.tip{display:none;margin-top:14px;background:#fdfbf7;border-radius:14px;padding:16px;font-size:14px;text-align:left;line-height:1.6}
+.tip.open{display:block}
+.tip b{font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="logo" src="icon-192.png" alt="">
+  <div class="brand">L'Essence de Soi</div>
+  <div class="sub">Lash Artist</div>
+  <p class="intro">Ici, ce n'est pas qu'une pose de cils.<br>C'est ta parenthèse.</p>
+
+  <a class="btn" href="https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec">Prendre rendez-vous</a>
+  <p class="note">Réservation en 1 minute · Tu règles sur place, le jour J</p>
+
+  <div class="soins">
+    <div class="soin"><div><div class="t">Cil à cil</div><div class="n">L'Essentiel</div></div><div class="p">45 €<small>1 h 30</small></div></div>
+    <div class="soin"><div><div class="t">Volume mixte</div><div class="n">L'Équilibre</div></div><div class="p">55 €<small>1 h 45</small></div></div>
+    <div class="soin"><div><div class="t">Volume russe</div><div class="n">L'Intensité</div></div><div class="p">65 €<small>2 h</small></div></div>
+    <div class="soin"><div><div class="t">Rehaussement de cils</div><div class="n">L'Éveil</div></div><div class="p">50 €<small>1 h 15</small></div></div>
+    <div class="soin"><div><div class="t">Brow lift</div><div class="n">La Sublimation</div></div><div class="p">40 €<small>45 min</small></div></div>
+  </div>
+
+  <button class="home" type="button" onclick="document.getElementById('tip').classList.toggle('open')">📲 Mettre sur mon écran d'accueil</button>
+  <div class="tip" id="tip">
+    <b>iPhone (Safari)</b> : bouton Partager ⎙ → « Sur l'écran d'accueil » → Ajouter.<br>
+    <b>Android (Chrome)</b> : menu ⋮ → « Ajouter à l'écran d'accueil ».
+  </div>
+</div>
+</body>
+</html>
