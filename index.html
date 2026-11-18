@@ -55,6 +55,8 @@ body{font-family:'Inter',sans-serif;font-weight:300;color:var(--choco);backgroun
   <a class="btn" href="https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec">Prendre rendez-vous</a>
   <p class="note">En 1 minute · Règlement sur place, le jour J</p>
   <a class="wa" id="wa" target="_blank" rel="noopener">💬 Rejoindre ma chaîne WhatsApp</a>
+  <a class="wa" id="pl" target="_blank" rel="noopener">🎧 Écouter ma playlist</a>
+  <a class="wa" id="pc" target="_blank" rel="noopener">🎙️ Écouter mon podcast</a>
 
   <button class="home" type="button" onclick="document.getElementById('tip').classList.toggle('open')">📲 Ajouter à mon écran d'accueil</button>
   <div class="tip" id="tip">
@@ -68,7 +70,7 @@ fetch('https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDB
   .then(function(r){ return r.json(); })
   .then(function(i){
     (i.offres||[]).forEach(function(o){ var d=document.createElement('div'); d.className='offre'; var b=document.createElement('b'); b.textContent='Offre du moment'; d.appendChild(b); d.appendChild(document.createTextNode(o)); document.getElementById('offres').appendChild(d); });
-    if (i.whatsapp) { var a=document.getElementById('wa'); a.href=i.whatsapp; a.style.display='block'; }
+    [['wa',i.whatsapp],['pl',i.playlist],['pc',i.podcast]].forEach(function(x){ if (x[1]) { var a=document.getElementById(x[0]); a.href=x[1]; a.style.display='block'; } });
   }).catch(function(){});
 </script>
 </body>
