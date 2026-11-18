@@ -19,52 +19,142 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--choco:#3b2a20;--cacao:#5a4030;--beige:#f3e9da;--fond:#d6c0a1;--doux:#6b5140}
-body{font-family:'Inter',sans-serif;font-weight:300;color:var(--choco);background:radial-gradient(120% 80% at 50% 0%,#e2cfb4 0%,#d6c0a1 55%,#c9b08e 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:56px 26px 44px;text-align:center}
-.wrap{max-width:440px;width:100%}
-.logo{width:92px;height:92px;border-radius:24px;box-shadow:0 8px 26px rgba(59,42,32,.22)}
-.brand{font-family:'Cormorant Garamond',serif;font-size:40px;letter-spacing:2px;color:var(--choco);margin-top:24px}
-.sub{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--doux);margin-top:6px}
-.line{width:46px;height:1px;background:var(--choco);opacity:.45;margin:30px auto}
-.signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:30px;color:var(--choco);line-height:1.25}
-.welcome{font-size:15px;line-height:1.75;color:var(--doux);margin:22px auto 38px;max-width:360px}
-.btn{display:block;padding:19px;border-radius:40px;background:var(--choco);color:var(--beige);text-decoration:none;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:20px;letter-spacing:3px;text-transform:uppercase;box-shadow:0 8px 24px rgba(59,42,32,.28)}
+:root{--choco:#3b2a20;--cacao:#5a4030;--beige:#f3e9da;--creme:#f8f2e9;--fond:#d6c0a1;--doux:#6b5140;--lin:rgba(59,42,32,.16)}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-weight:300;color:var(--choco);background:var(--fond);line-height:1.6;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Cormorant Garamond',serif}
+a{color:inherit}
+.hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px 26px 48px;background:radial-gradient(120% 80% at 50% 0%,#e6d4bb 0%,#d6c0a1 60%,#cbb291 100%)}
+.logo{width:88px;height:88px;border-radius:24px;box-shadow:0 10px 30px rgba(59,42,32,.22)}
+.brand{font-family:'Cormorant Garamond',serif;font-size:44px;letter-spacing:2px;margin-top:22px;line-height:1.1}
+.sub{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--doux);margin-top:8px}
+.line{width:46px;height:1px;background:var(--choco);opacity:.4;margin:28px auto}
+.signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:31px;line-height:1.25}
+.welcome{font-size:15px;line-height:1.8;color:var(--doux);margin:20px auto 34px;max-width:360px}
+.btn{display:block;width:100%;max-width:400px;margin:0 auto;padding:19px;border-radius:40px;background:var(--choco);color:var(--beige);text-decoration:none;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:20px;letter-spacing:3px;text-transform:uppercase;box-shadow:0 10px 26px rgba(59,42,32,.28);text-align:center}
 .btn:active{background:var(--cacao)}
 .note{font-size:13px;color:var(--doux);margin-top:14px}
-.home{margin-top:40px;background:none;border:1px solid rgba(59,42,32,.35);border-radius:30px;padding:11px 20px;font:inherit;font-size:13px;color:var(--choco);cursor:pointer}
-.tip{display:none;margin-top:14px;background:rgba(243,233,218,.55);border:1px solid rgba(59,42,32,.15);border-radius:14px;padding:16px;font-size:14px;text-align:left;line-height:1.7;color:var(--doux)}
-.offre{background:var(--choco);color:var(--beige);border-radius:16px;padding:14px 16px;margin:0 0 10px;font-size:14px;line-height:1.5}
+.scroll{margin-top:34px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--doux);text-decoration:none}
+#offres{width:100%;max-width:400px;margin:0 auto 22px}
+.offre{background:var(--choco);color:var(--beige);border-radius:16px;padding:14px 16px;margin-bottom:10px;font-size:14px;line-height:1.5}
 .offre b{display:block;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:12px;letter-spacing:3px;text-transform:uppercase;opacity:.75;margin-bottom:4px}
-#offres{margin:-14px 0 30px}
-.wa{display:none;margin-top:14px;padding:13px;border-radius:40px;border:1px solid var(--choco);color:var(--choco);text-decoration:none;font-size:14px}
+section{padding:56px 24px;max-width:520px;margin:0 auto}
+.band{background:var(--creme)}
+.band>section{padding-top:56px;padding-bottom:56px}
+.kicker{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--doux);text-align:center}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:34px;text-align:center;margin:8px 0 30px;line-height:1.15}
+.cat{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--doux);margin:26px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--lin)}
+.cat:first-of-type{margin-top:0}
+.p{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--lin)}
+.p .n{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.2}
+.p .d{font-size:13px;color:var(--doux);font-style:italic;margin-top:2px}
+.p .t{font-size:12px;color:var(--doux);white-space:nowrap}
+.hint{font-size:13px;color:var(--doux);text-align:center;margin-top:22px}
+.steps{display:grid;gap:14px}
+.step{display:flex;gap:16px;align-items:flex-start;background:rgba(248,242,233,.6);border:1px solid var(--lin);border-radius:18px;padding:18px}
+.step .k{flex:0 0 38px;height:38px;border-radius:50%;background:var(--choco);color:var(--beige);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:20px}
+.step b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:20px;line-height:1.2}
+.step span{font-size:14px;color:var(--doux)}
+.gift{margin-top:26px;text-align:center;border:1px solid var(--choco);border-radius:18px;padding:22px 18px}
+.gift .big{font-family:'Cormorant Garamond',serif;font-size:40px;line-height:1}
+.gift p{font-size:14px;color:var(--doux);margin-top:6px}
+.info{display:grid;gap:12px}
+.card{background:var(--creme);border-radius:18px;padding:18px 20px;border:1px solid var(--lin)}
+.card .l{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--doux);margin-bottom:6px}
+.card .v{font-size:15px;line-height:1.6}
+.card a{font-size:13px;color:var(--choco)}
+.links{display:grid;gap:10px}
+.wa{display:none;padding:14px;border-radius:40px;border:1px solid var(--choco);color:var(--choco);text-decoration:none;font-size:14px;text-align:center;background:rgba(248,242,233,.5)}
+footer{text-align:center;padding:40px 24px 120px;font-size:12px;color:var(--doux)}
+footer .home{background:none;border:1px solid var(--lin);border-radius:30px;padding:11px 20px;font:inherit;font-size:13px;color:var(--choco);cursor:pointer;margin-bottom:14px}
+.tip{display:none;margin:0 auto 18px;max-width:420px;background:var(--creme);border:1px solid var(--lin);border-radius:14px;padding:16px;font-size:14px;text-align:left;line-height:1.7}
 .tip.open{display:block}
-.tip b{font-weight:500;color:var(--choco)}
+.tip b{font-weight:500}
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(214,192,161,0),rgba(214,192,161,.96) 35%);transform:translateY(110%);transition:transform .3s;z-index:9}
+.sticky.on{transform:none}
+.sticky .btn{padding:16px;font-size:18px}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <img class="logo" src="icon-192.png" alt="">
+<div class="hero">
+  <img class="logo" src="icon-192.png" alt="Essence de Soi">
   <div class="brand">Essence de Soi</div>
-  <div class="sub">Lash Artist</div>
-
+  <div class="sub">Lash Artist · Nice</div>
   <div class="line"></div>
   <p class="signature">Votre regard,<br>ma signature.</p>
   <p class="welcome">Bienvenue. Ici, le temps ralentit. Installez-vous, fermez les yeux&nbsp;: je prends soin de votre regard avec douceur, pour qu'il vous ressemble, simplement.</p>
-
   <div id="offres"></div>
-  <a class="btn" href="https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec">Prendre rendez-vous</a>
-  <p class="note">En 1 minute · Règlement sur place, le jour J</p>
-  <a class="wa" id="wa" target="_blank" rel="noopener">💬 Rejoindre ma chaîne WhatsApp</a>
-  <a class="wa" id="pl" target="_blank" rel="noopener">🎧 Écouter ma playlist</a>
-  <a class="wa" id="pc" target="_blank" rel="noopener">🎙️ Écouter mon podcast</a>
+  <a class="btn" id="cta" href="https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec">Prendre rendez-vous</a>
+  <p class="note">En 1 minute · Sans compte · Règlement sur place</p>
+  <a class="scroll" href="#prestations">Découvrir ↓</a>
+</div>
 
+<div class="band"><section id="prestations">
+  <div class="kicker">La carte</div>
+  <h2>Mes prestations</h2>
+  <div class="cat">Extensions de cils · pose ou remplissage à 3 semaines</div>
+  <div class="p"><div><div class="n">Cil à cil</div><div class="d">Un regard naturel, simplement sublimé</div></div><div class="t">2 h</div></div>
+  <div class="p"><div><div class="n">Mixte</div><div class="d">Le naturel avec une touche de volume</div></div><div class="t">2 h</div></div>
+  <div class="p"><div><div class="n">Volume russe</div><div class="d">Un regard intense et velouté</div></div><div class="t">2 h</div></div>
+  <div class="p"><div><div class="n">Méga volume</div><div class="d">Un regard glamour, dense et lumineux</div></div><div class="t">2 h</div></div>
+  <div class="cat">Rehaussement</div>
+  <div class="p"><div><div class="n">Lashlift + teinture</div><div class="d">Vos cils naturels, recourbés et sublimés</div></div><div class="t">1 h 15</div></div>
+  <div class="p"><div><div class="n">Browlift + teinture + épilation</div><div class="d">Des sourcils structurés et disciplinés</div></div><div class="t">1 h 15</div></div>
+  <div class="cat">Extras</div>
+  <div class="p"><div><div class="n">Épilation sourcils</div></div><div class="t">30 min</div></div>
+  <div class="p"><div><div class="n">Dépose + shampoing + soin</div></div><div class="t">30 min</div></div>
+  <p class="hint">Couleurs marron, burgundy, paillettes… Tarifs et options au moment de réserver.</p>
+</section></div>
+
+<section id="comment">
+  <div class="kicker">Simple et rapide</div>
+  <h2>Comment ça marche</h2>
+  <div class="steps">
+    <div class="step"><div class="k">1</div><div><b>Choisissez votre soin</b><span>Pose, remplissage, rehaussement… et vos options.</span></div></div>
+    <div class="step"><div class="k">2</div><div><b>Choisissez votre créneau</b><span>Les disponibilités en direct, du lundi au samedi.</span></div></div>
+    <div class="step"><div class="k">3</div><div><b>C'est réservé</b><span>Votre prénom et votre téléphone suffisent. Vous réglez sur place, le jour J.</span></div></div>
+  </div>
+  <div class="gift">
+    <div class="kicker">Parrainage</div>
+    <div class="big serif" style="margin-top:8px">−10&nbsp;%</div>
+    <p>pour vous <b>et</b> votre amie, dès votre premier rendez-vous passé.</p>
+  </div>
+</section>
+
+<div class="band"><section id="infos">
+  <div class="kicker">Infos pratiques</div>
+  <h2>Me trouver</h2>
+  <div class="info">
+    <div class="card"><div class="l">Adresse</div><div class="v">Chez LeCoinDesTrouvailles<br>20 boulevard Raimbaldi, 06000 Nice</div>
+      <a href="https://www.google.com/maps/search/?api=1&query=20+boulevard+Raimbaldi+06000+Nice" target="_blank" rel="noopener">Ouvrir dans Maps →</a></div>
+    <div class="card"><div class="l">Horaires</div><div class="v">Du lundi au samedi, 9h – 19h<br>Uniquement sur rendez-vous</div></div>
+    <div class="card"><div class="l">Paiement</div><div class="v">Sur place, le jour du rendez-vous. Rien à payer en ligne.</div></div>
+  </div>
+</section></div>
+
+<section id="lien">
+  <div class="kicker">Restons proches</div>
+  <h2>Ma petite bulle</h2>
+  <div class="links">
+    <a class="wa" id="wa" target="_blank" rel="noopener">💬 Rejoindre ma chaîne WhatsApp</a>
+    <a class="wa" id="pl" target="_blank" rel="noopener">🎧 Écouter ma playlist</a>
+    <a class="wa" id="pc" target="_blank" rel="noopener">🎙️ Écouter mon podcast</a>
+    <a class="wa" style="display:block" href="https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec">📅 Annuler ou gérer mon rendez-vous</a>
+  </div>
+</section>
+
+<footer>
   <button class="home" type="button" onclick="document.getElementById('tip').classList.toggle('open')">📲 Ajouter à mon écran d'accueil</button>
   <div class="tip" id="tip">
     <b>iPhone (Safari)</b> : bouton Partager ⎙ → « Sur l'écran d'accueil » → Ajouter.<br>
     <b>Android (Chrome)</b> : menu ⋮ → « Ajouter à l'écran d'accueil ».
   </div>
-  <p style="margin-top:30px;font-size:12px"><a href="https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec?legal" target="_blank" rel="noopener" style="color:var(--doux)">Mentions légales &amp; confidentialité</a></p>
-</div>
+  <p>© Essence de Soi · Emilie Alves Vaz · Nice</p>
+  <p style="margin-top:6px"><a href="https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec?legal" target="_blank" rel="noopener">Mentions légales &amp; confidentialité</a></p>
+</footer>
+
+<div class="sticky" id="sticky"><a class="btn" href="https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec">Prendre rendez-vous</a></div>
+
 <script>
 fetch('https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDBmwo1LHjLLWaQlveDyziGZ9eOgfHHb3aoVD/exec?action=infos')
   .then(function(r){ return r.json(); })
@@ -72,6 +162,9 @@ fetch('https://script.google.com/macros/s/AKfycbx-nPuY94afz15EyZW0PXHqAmmWqdPdDB
     (i.offres||[]).forEach(function(o){ var d=document.createElement('div'); d.className='offre'; var b=document.createElement('b'); b.textContent='Offre du moment'; d.appendChild(b); d.appendChild(document.createTextNode(o)); document.getElementById('offres').appendChild(d); });
     [['wa',i.whatsapp],['pl',i.playlist],['pc',i.podcast]].forEach(function(x){ if (x[1]) { var a=document.getElementById(x[0]); a.href=x[1]; a.style.display='block'; } });
   }).catch(function(){});
+// bouton « Prendre rendez-vous » qui reste visible en bas quand on fait défiler
+var cta=document.getElementById('cta'), st=document.getElementById('sticky');
+if ('IntersectionObserver' in window) new IntersectionObserver(function(e){ st.classList.toggle('on', !e[0].isIntersecting); }).observe(cta);
 </script>
 </body>
 </html>
